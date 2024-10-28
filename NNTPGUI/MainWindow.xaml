@@ -1,0 +1,22 @@
+﻿<Window x:Class="NNTPGUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NNTPGUI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <DockPanel LastChildFill="False">
+            <ToolBarPanel DockPanel.Dock="Top" Height="22" Background="#FFCECECE">
+                <ComboBox Width="57" HorizontalAlignment="Left" Margin ="20, 0, 0, 0" Height="21" HorizontalContentAlignment="Stretch">
+                    <Button Content="SETUP" Click="OpenConnectionWindow_Click"/>
+                </ComboBox>
+            </ToolBarPanel>
+            <ListBox ItemsSource="{Binding NewsGroupsList}" SelectedItem="{Binding SelectedNewsGroup}" Height="Auto" Width="172" Margin="20, 20, 0, 20"/>
+            <ListBox ItemsSource="{Binding ArticlesList}" SelectedItem="{Binding SelectedArticle}" DockPanel.Dock="Top" Height="134" Margin="20, 20, 20, 0"/>
+            <ListBox ItemsSource="{Binding ArticleContent}" Focusable="False" DockPanel.Dock="Top" Height="218"  Margin="20, 20, 20, 20"/>
+        </DockPanel>
+
+    </Grid>
+</Window>

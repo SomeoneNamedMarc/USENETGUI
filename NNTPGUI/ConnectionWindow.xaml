@@ -1,0 +1,20 @@
+﻿<Window x:Class="NNTPGUI.ConnectionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Connection Settings" Height="AUTO" Width="300">
+    <StackPanel Margin="10">
+        <TextBlock Text="Host (DNS):" />
+        <TextBox x:Name="HostTextBox" Text="news.sunsite.dk"/>
+
+        <TextBlock Text="Port:" Margin="0,10,0,0"/>
+        <TextBox x:Name="PortTextBox" Text="119"/>
+
+        <TextBlock Text="Username:" Margin="0,10,0,0"/>
+        <TextBox x:Name="UsernameTextBox" Text="marvil01@easv365.dk"/>
+
+        <TextBlock Text="Password:" Margin="0,10,0,0"/>
+        <TextBox x:Name="PasswordBox" Text="598411"/>
+
+        <Button Content="Connect" Margin="0,10,0,0" Click="ConnectButton_Click"/>
+    </StackPanel>
+</Window>
